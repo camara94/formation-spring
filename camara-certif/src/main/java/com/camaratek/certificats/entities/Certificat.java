@@ -24,7 +24,7 @@ public class Certificat implements Serializable {
 	private Long id;
 	private String numCert;
 	private String titre;
-	@Column( length = 1000 )
+	@Column( length = 1800 )
 	private String description;
 	private String auteur;
 	 @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")

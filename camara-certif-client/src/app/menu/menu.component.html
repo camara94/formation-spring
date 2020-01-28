@@ -1,0 +1,15 @@
+<div class="container">
+
+  <mat-list>
+    <mat-list-item *ngFor="let cert of Certificats">
+
+      <img matListAvatar src={{cert.urlpng}} alt={{cert.titre}} />
+      <h1 matLine> {{cert.titre}} </h1>
+      <p matLine >
+        <span>{{ cert.description }}</span>
+      </p>
+    </mat-list-item>
+  </mat-list>
+
+</div>
+
