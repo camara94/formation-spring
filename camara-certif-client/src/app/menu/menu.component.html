@@ -1,15 +1,50 @@
-<div class="container">
+<div class="container"
+     fxLayout="column"
+     fxLayoutGap="10px">
+  <div fxFlex>
+    <H3>Menu</H3>
+    <hr>
+  </div>
 
-  <mat-list>
-    <mat-list-item *ngFor="let cert of Certificats">
+  <div>
+    <mat-grid-list cols="2" rowHeight="200px">
+      <mat-grid-tile *ngFor="let cert of Certificats">
+        <img height="200px" src={{cert.urlpng}} alt={{cert.titre}} />
+        <mat-grid-tile-footer>
+          <p matLine >
+            <span>{{cert.titre | uppercase}}</span>
+          </p>
+        </mat-grid-tile-footer>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
 
-      <img matListAvatar src={{cert.urlpng}} alt={{cert.titre}} />
-      <h1 matLine> {{cert.titre}} </h1>
-      <p matLine >
-        <span>{{ cert.description }}</span>
-      </p>
-    </mat-list-item>
-  </mat-list>
+
+  <div fxFlex *ngIf="selectedCertificat">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
+              <h3>{{selectedCertificat.titre | uppercase}}</h3>
+            </mat-card-title>
+            <mat-card-subtitle>
+              <h4>{{selectedCertificat.universite}}</h4>
+            </mat-card-subtitle>
+        </mat-card-header>
+        <img matCardImage src={{selectedCertificat.urlpng}} alt={{selectedCertificat.titre}}>
+        <mat-card-content>
+            <p>
+              {{selectedCertificat.description}}
+            </p>
+        </mat-card-content>
+        <mat-card-actions align="start">
+            <button mat-button>LIKE</button>
+            <button mat-button>SHARE</button>
+        </mat-card-actions>
+        <mat-card-footer>
+           <P>Auteur: {{selectedCertificat.auteur}} </P>
+        </mat-card-footer>
+    </mat-card>
+  </div>
 
 </div>
 
