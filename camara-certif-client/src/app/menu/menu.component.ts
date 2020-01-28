@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
   Certificats: Certificat[] = CERTIFICAT;
-  selectedCertificat:Certificat = CERTIFICAT[0];
+
   constructor() { }
 
   ngOnInit() {

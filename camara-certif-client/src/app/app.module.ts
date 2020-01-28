@@ -19,12 +19,14 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import 'hammerjs';
 
 import 'hammerjs';
+import { CertificatDetailComponent } from './certificat-detail/certificat-detail.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent
+    MenuComponent,
+    CertificatDetailComponent
   ],
   imports: [
     BrowserModule,
