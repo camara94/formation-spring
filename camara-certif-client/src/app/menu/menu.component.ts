@@ -9,12 +9,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
-  Certificats: Certificat[] = CERTIFICAT;
+  certificats: Certificat[] = CERTIFICAT;
+  certificat:Certificat;
 
   constructor() { }
 
   ngOnInit() {
-    console.log(this.Certificats);
+  }
+
+  onSelect(certificat: Certificat) {
+    this.certificat = certificat;
   }
 
 }

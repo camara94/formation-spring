@@ -17,8 +17,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import 'hammerjs';
-
-import 'hammerjs';
 import { CertificatDetailComponent } from './certificat-detail/certificat-detail.component';
 
 

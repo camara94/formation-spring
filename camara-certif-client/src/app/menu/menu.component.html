@@ -8,19 +8,17 @@
 
   <div>
     <mat-grid-list cols="2" rowHeight="200px">
-      <mat-grid-tile *ngFor="let cert of Certificats">
-        <img height="200px" src={{cert.urlpng}} alt={{cert.titre}} />
+      <mat-grid-tile *ngFor="let certiticat of certificats" (click)="onSelect(certiticat)">
+        <img height="200px" src={{certiticat.urlpng}} alt={{certiticat.titre}} />
         <mat-grid-tile-footer>
           <p matLine >
-            <span>{{cert.titre | uppercase}}</span>
+            <span>{{certiticat.titre | uppercase}}</span>
           </p>
         </mat-grid-tile-footer>
       </mat-grid-tile>
     </mat-grid-list>
   </div>
 
-
-  <app-certificat-detail></app-certificat-detail>
-
+  <app-certificat-detail [certificat]="certificat"></app-certificat-detail>
 </div>
 

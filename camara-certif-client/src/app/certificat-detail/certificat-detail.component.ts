@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { CERTIFICAT } from './../app.component';
+import { Component, OnInit, Input } from '@angular/core';
 import { Certificat } from './../shared/certificat';
 
 @Component({
@@ -8,10 +7,12 @@ import { Certificat } from './../shared/certificat';
   styleUrls: ['./certificat-detail.component.scss']
 })
 export class CertificatDetailComponent implements OnInit {
-  selectedCertificat:Certificat = CERTIFICAT[1];
+  @Input()
+  certificat:Certificat;
   constructor() { }
 
   ngOnInit() {
+    //console.log(this.certificat);
   }
 
 }
