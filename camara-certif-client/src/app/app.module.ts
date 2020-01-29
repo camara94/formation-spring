@@ -20,12 +20,16 @@ import 'hammerjs';
 import { CertificatDetailComponent } from './certificat-detail/certificat-detail.component';
 
 import { CertificatService } from './services/certificat.service';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    CertificatDetailComponent
+    CertificatDetailComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
