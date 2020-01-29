@@ -19,6 +19,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import 'hammerjs';
 import { CertificatDetailComponent } from './certificat-detail/certificat-detail.component';
 
+import { CertificatService } from './services/certificat.service';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,9 @@ import { CertificatDetailComponent } from './certificat-detail/certificat-detail
     MatCardModule,
     MatButtonModule
   ],
-  providers: [],
+  providers: [
+    CertificatService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

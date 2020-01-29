@@ -5,8 +5,7 @@ fxLayout.xs="column"
 fxLayoutAlign.gt-md="space-around center"
 fxLayoutGap="10px"
 fxLayoutGap.xs="0">
-<div *ngIf="certificat">
-  <div fxFlex="0">
+  <div fxFlex="0" *ngIf="certificat">
     <mat-card>
         <mat-card-header>
             <mat-card-title>
@@ -17,21 +16,6 @@ fxLayoutGap.xs="0">
             </mat-card-subtitle>
         </mat-card-header>
         <img matCardImage src={{certificat.urlpng}} alt={{certificat.titre}}>
-        <mat-card-actions align="start">
-            <button mat-button>LIKE</button>
-            <button mat-button>SHARE</button>
-        </mat-card-actions>
-
-    </mat-card>
-  </div>
-
-  <div fxFlex="0">
-    <mat-card>
-        <mat-card-header>
-            <mat-card-title>
-              <h3>{{ 'Description' | uppercase}}</h3>
-            </mat-card-title>
-        </mat-card-header>
         <mat-card-content>
           <h2>{{'Auteur: ' + certificat.auteur }}</h2>
           <h3>Date De Certification :  {{certificat.dateCertif | date }}</h3>
@@ -40,8 +24,11 @@ fxLayoutGap.xs="0">
               {{certificat.description}}
             </p >
         </mat-card-content>
+        <mat-card-actions align="start">
+            <button mat-button>LIKE</button>
+            <button mat-button>SHARE</button>
+        </mat-card-actions>
+
     </mat-card>
   </div>
-
-</div>
 </div>

@@ -1,4 +1,4 @@
-import { CERTIFICAT } from './../app.component';
+import { CertificatService } from './../services/certificat.service';
 import { Certificat } from './../shared/certificat';
 import { Component, OnInit } from '@angular/core';
 
@@ -9,12 +9,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
-  certificats: Certificat[] = CERTIFICAT;
+  certificats:Certificat[];
   certificat:Certificat;
 
-  constructor() { }
+  constructor( private certificatService: CertificatService) { }
 
   ngOnInit() {
+    this.certificats = this.certificatService.getCertificats();
   }
 
   onSelect(certificat: Certificat) {
