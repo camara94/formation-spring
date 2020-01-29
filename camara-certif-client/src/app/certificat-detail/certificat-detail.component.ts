@@ -1,5 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Certificat } from './../shared/certificat';
+import { Params, ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
+import { CertificatService } from './../services/certificat.service';
 
 @Component({
   selector: 'app-certificat-detail',
@@ -7,12 +10,18 @@ import { Certificat } from './../shared/certificat';
   styleUrls: ['./certificat-detail.component.scss']
 })
 export class CertificatDetailComponent implements OnInit {
-  @Input()
   certificat:Certificat;
-  constructor() { }
+  constructor( private certificatService: CertificatService,
+    private route: ActivatedRoute,
+    private location: Location) { }
+
 
   ngOnInit() {
-    //console.log(this.certificat);
+    let id = this.route.snapshot.params['id'];
+    this.certificat = this.certificatService.getCertificat(+id);
   }
 
+  goBack(): void {
+    this.location.back();
+  }
 }

@@ -11,10 +11,10 @@ import { MenuComponent } from './menu/menu.component';
 
 const routes: Routes = [
   { path: 'accueil', component: HomeComponent },
+  { path: 'certificat/:id', component: CertificatDetailComponent },
   { path: 'apropos', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'menu', component: MenuComponent },
-  { path: 'certificat', component: CertificatDetailComponent },
   { path: '', redirectTo: '/accueil', pathMatch: 'full' }
 ];
 

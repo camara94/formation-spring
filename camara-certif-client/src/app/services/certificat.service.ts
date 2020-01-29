@@ -13,4 +13,15 @@ export class CertificatService {
     return CERTIFICAT;
   }
 
+  getCertificat(id: number): Certificat {
+    //return CERTIFICAT.some(cert => {cert.id === id})[0];
+    let c: Certificat = null;
+    CERTIFICAT.forEach((cert)=> {
+      if (cert.id == id) {
+        c=cert;
+      }
+    });
+    return c;
+  }
+
 }
