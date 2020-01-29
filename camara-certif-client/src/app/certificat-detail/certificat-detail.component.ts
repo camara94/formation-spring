@@ -18,7 +18,8 @@ export class CertificatDetailComponent implements OnInit {
 
   ngOnInit() {
     let id = this.route.snapshot.params['id'];
-    this.certificat = this.certificatService.getCertificat(+id);
+    this.certificatService.getCertificat(+id)
+      .subscribe(data => { this.certificat = data; console.log(data) ;}, err=> console.error(err));
   }
 
   goBack(): void {

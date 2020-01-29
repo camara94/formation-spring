@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -13,8 +14,10 @@ import { MenuComponent } from './menu/menu.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
-
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatInputModule, MatPaginatorModule, MatProgressSpinnerModule, 
+  MatSortModule, MatTableModule } from "@angular/material";
+
 
 import 'hammerjs';
 import { CertificatDetailComponent } from './certificat-detail/certificat-detail.component';
@@ -47,7 +50,13 @@ import { ContactComponent } from './contact/contact.component';
     FlexLayoutModule,
     MatGridListModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatInputModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatProgressSpinnerModule,
+    HttpClientModule
   ],
   providers: [
     CertificatService

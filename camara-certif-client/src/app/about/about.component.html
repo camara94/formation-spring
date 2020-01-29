@@ -1,1 +1,120 @@
-<p>about works!</p>
+<div class="container"
+  fxLayout="column"
+  fxLayoutGap="10px">
+
+  <div fxFlex>
+    <div>
+        <h3>Apropos de moi !</h3>
+        <hr>
+    </div>
+  </div>
+
+  <div fxFlex>
+    <div fxLayout="column" fxLayout.gt-sm="row">
+      <div fxFlex="70">
+        <h2>Qui Suis-je ?</h2>
+        
+        <p>
+          Je suis CAMARA Laby Damaro. Etudiant en Technologie 
+          de l'Informatique à l'Institut Supérieur des Etudes 
+          Technologiques de Djerba, je suis actuellement à la 
+          recherche d'un stage d'été
+        </p>
+          <p> 
+            Je suis à la fois passionnée par les nouvelles technologies et le monde du web. 
+            Totalement devoué pour les Technolgies de l'Informatique, 
+            je suis toujours à la recherche de l'amelioration de mes 
+            connaissances à travers les livres,les magazines, le web, forum ....
+          </p>
+      </div>
+      <div fxFlex="30">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>
+            <h2>Facts At a Glance</h2>
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <dl>
+              <dt>Started</dt>
+              <dd>3 Feb. 2013</dd>
+              <dt>Major Stake Holder</dt>
+              <dd>HK Fine Foods Inc.</dd>
+              <dt>Last Year's Turnover</dt>
+              <dd>$1,250,375</dd>
+              <dt>Employees</dt>
+              <dd>40</dd>
+            </dl>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+
+  <div fxFlex>
+    <mat-card>
+      <blockquote>
+        <h3>
+          L’excellence est un art que l’on n’atteint que par l’exercice constant. 
+          Nous sommes ce que nous faisons de manière répétée. 
+          L’excellence n’est donc pas une action mais une habitude.
+        </h3>
+        <footer>-- Aristote,
+          <cite></cite>
+        </footer>
+      </blockquote>
+    </mat-card>
+  </div>
+
+
+  <div fxFlex>
+    <h2>Corporate Leadership</h2>
+    <p>
+
+      <mat-table class="lessons-table mat-elevation-z8" [dataSource]="dataSource">
+  
+        <ng-container matColumnDef="periode">
+            <div *matHeaderCellDef>periode</div>
+            <div *matCellDef="let lesson"> {{lesson.periode}}</div>
+        </ng-container>
+      
+        <ng-container matColumnDef="entreprise">
+            <div *matHeaderCellDef>entreprise</div>
+            <div class="description-cell"
+                      *matCellDef="let lesson">{{lesson.entreprise}}</div>
+        </ng-container>
+      
+        <ng-container matColumnDef="type">
+            <div *matHeaderCellDef>type</div>
+            <div class="duration-cell"
+                      *matCellDef="let lesson">{{lesson.type}}</div>
+        </ng-container>
+        <ng-container matColumnDef="realisation">
+          <div *matHeaderCellDef>realisation</div>
+          <div class="duration-cell"
+                    *matCellDef="let lesson">{{lesson.realisation}}</div>
+      </ng-container>
+
+      <ng-container matColumnDef="ville">
+        <div *matHeaderCellDef>ville</div>
+        <div class="duration-cell"
+                  *matCellDef="let lesson">{{lesson.ville}}</div>
+    </ng-container>
+
+    <ng-container matColumnDef="pays">
+      <div *matHeaderCellDef>Pays</div>
+      <div class="duration-cell"
+                *matCellDef="let lesson">{{lesson.pays}}</div>
+  </ng-container>
+      
+        
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        
+        <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+        
+    </mat-table>
+      
+
+    </p>
+  </div>
+</div>
