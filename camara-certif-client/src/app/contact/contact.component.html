@@ -1,1 +1,36 @@
-<p>contact works!</p>
+<div class="container"
+  fxLayout="column"
+  fxLayoutGap="10px">
+
+  <div fxFlex>
+    <div>
+        <h3>Contactez-moi !</h3>
+        <hr>
+    </div>
+  </div>
+
+  <div fxFlex>
+    <h3>Mes contacts</h3>
+    <div fxLayout="column" fxLayout.gt-sm="row">
+      <div fxFlex="50" fxFlexOffset="20px">
+        <h4>Mon Adresse</h4>
+        <address style="text-size: 80%">
+          Avenue de la Liberté, Route Houmet Souk - Midoun<br> 4116 Midoun - Djerba<br>(Tunisie)<br>
+          <i class="fa fa-phone"></i>: +216 56 352 275<br>
+          <i class="fa fa-fax"></i>: +216 29 352 069<br>
+          <i class="fa fa-envelope"></i>:
+          <a href="ldamaro98@gmail.com">ldamaro98@gmail.com</a>
+        </address>
+        <p></p>
+        <div>
+          <a mat-raised-button href="tel:+21656352275"><i class="fa fa-phone"></i> Call</a>
+          <a mat-raised-button><i class="fa fa-skype"></i> Skype</a>
+          <a mat-raised-button href="mailto:ldamaro98@gmail.com"><i class="fa fa-envelope-o"></i> Email</a>
+        </div>
+        </div>
+      <div fxFlex="40">
+        <h4>Localisation géographique</h4>
+      </div>
+    </div>
+  </div>
+</div>
